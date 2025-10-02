@@ -1,31 +1,76 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    text-align: center;
-    padding: 20px;
+:root{
+  --bg: #0b0b10;
+  --panel: #12131a;
+  --text: #e8e8ef;
+  --muted: #a9acc0;
+  --accent: #7c5cff;
+  --accent-2: #24c8ff;
+  --card: #161823;
+  --border: #2a2e3f;
+  --shadow: 0 10px 24px rgba(0,0,0,.35);
+  --radius: 16px;
 }
 
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+*{ box-sizing:border-box }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial }
+img{ max-width:100%; display:block }
 
-h1 {
-    color: #2c3e50;
-}
+.container{ max-width:1100px; margin:0 auto; padding:0 20px }
+.section{ padding:72px 0 }
+.section.alt{ background:linear-gradient(180deg, transparent, rgba(255,255,255,.02)) }
+h1,h2,h3{ margin:0 0 .4rem; line-height:1.15 }
+h1{ font-size:clamp(2rem, 4vw + 1rem, 3.5rem) }
+h2{ font-size:clamp(1.6rem, 2vw + 1rem, 2.2rem) }
+h3{ font-size:1.15rem }
+.sub{ color:var(--muted); margin:.2rem 0 1.2rem }
 
-h2 {
-    color: #34495e;
-}
+.site-header{ position:sticky; top:0; z-index:10; backdrop-filter:saturate(1.2) blur(8px); background:rgba(11,11,16,.6); border-bottom:1px solid var(--border) }
+.nav{ display:flex; align-items:center; justify-content:space-between; height:64px }
+.brand{ font-weight:700; text-decoration:none; color:var(--text); letter-spacing:.2px }
+.brand .accent{ color:var(--accent) }
+.links{ display:flex; gap:18px; align-items:center }
+.links a{ color:var(--muted); text-decoration:none }
+.links a:hover{ color:var(--text) }
+.btn{ padding:10px 14px; border-radius:999px; background:var(--accent); color:white !important; text-decoration:none; box-shadow:var(--shadow); border:1px solid transparent }
+.btn.ghost{ background:transparent; border-color:var(--border); color:var(--text) !important }
+.btn:hover{ filter:brightness(1.05) }
 
-a {
-    color: #2980b9;
-    text-decoration: none;
-}
+.hero{ padding:72px 0 32px; background: radial-gradient(1200px 600px at 80% -10%, rgba(124,92,255,.25), transparent 60%), radial-gradient(900px 500px at 10% -10%, rgba(36,200,255,.18), transparent 55%) }
+.hero-inner{ display:grid; grid-template-columns:1.2fr .8fr; gap:36px; align-items:center }
+.hero-text .tagline{ color:var(--muted); margin:.6rem 0 1rem }
+.cta-row{ display:flex; gap:12px; margin:12px 0 8px }
+.meta{ color:var(--muted); font-size:.9rem }
+.hero-img img{ border-radius:var(--radius); box-shadow:var(--shadow); border:1px solid var(--border) }
 
-a:hover {
-    text-decoration: underline;
+.grid{ display:grid; gap:18px }
+.grid.cards{ grid-template-columns:repeat(3,1fr) }
+.grid.gallery{ grid-template-columns:repeat(3,1fr) }
+.grid.two{ grid-template-columns:repeat(2,1fr) }
+
+.card{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow) }
+.card h3{ margin-bottom:.35rem }
+.card p{ color:var(--muted) }
+
+.chips{ list-style:none; display:flex; flex-wrap:wrap; gap:10px; padding:0; margin:16px 0 0 }
+.chips li{ border:1px solid var(--border); color:var(--muted); border-radius:999px; padding:6px 10px; font-size:.9rem; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.05)) }
+
+.code{ background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); overflow:auto; box-shadow:var(--shadow) }
+.code pre{ margin:0; padding:16px; color:#e8e8ef }
+.code code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace }
+
+.list{ margin:.4rem 0 0; padding-left:18px }
+.list code{ background:rgba(255,255,255,.06); padding:2px 6px; border-radius:6px; border:1px solid var(--border) }
+
+.site-footer{ border-top:1px solid var(--border); background:rgba(0,0,0,.3) }
+.footer-grid{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:22px 0 }
+.site-footer .links{ gap:14px }
+
+@media (max-width: 900px){
+  .hero-inner{ grid-template-columns:1fr; }
+  .grid.cards{ grid-template-columns:1fr; }
+  .grid.gallery{ grid-template-columns:1fr 1fr; }
+  .grid.two{ grid-template-columns:1fr; }
+}
+@media (max-width: 560px){
+  .links{ display:none } /* keep header clean on very small screens */
 }
