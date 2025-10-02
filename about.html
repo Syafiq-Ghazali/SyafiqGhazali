@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>About Me</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Syafiq Ghazali</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>About Me</h1>
-        <p>This is my about page where I share more about my love for Fortnite!</p>
-        <a href="index.html">Back to Main Page</a>  <!-- Link back to Main Page -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Syafiq<span class="accent">G</span></a>
+      <nav class="links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#get-started">Get Started</a>
+        <a class="btn" href="https://github.com/Syafiq-Ghazali/SyafiqGhazali" target="_blank">GitHub</a>
+      </nav>
     </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1>About</h1>
+      <p class="sub">Who I am and what this project is about.</p>
+      <div class="grid two">
+        <div class="card">
+          <h3>Hi, I’m Syafiq</h3>
+          <p>I build firmware, robotics, and web things. This site showcases one of my projects built with plain HTML & CSS.</p>
+          <p>Want to collaborate? <a href="mailto:mmugha01@student.ubc.ca">Email me</a>.</p>
+        </div>
+        <div class="card">
+          <h3>Project Goals</h3>
+          <ul class="list">
+            <li>Simple, fast, and mobile-friendly.</li>
+            <li>Easy to extend with more sections.</li>
+            <li>Deployable on GitHub Pages in minutes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="y"></span> Syafiq Ghazali</p>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/Syafiq-Ghazali" target="_blank" rel="noopener">Profile</a>
+      </nav>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
 </body>
 </html>
