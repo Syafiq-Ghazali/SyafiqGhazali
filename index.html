@@ -1,19 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>MAIN PAGE</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Syafiq Ghazali — Amazing Project</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Fast. Clean. Robust. A project you actually want to use." />
+  <meta property="og:title" content="Syafiq Ghazali — Amazing Project" />
+  <meta property="og:description" content="Fast. Clean. Robust. A project you actually want to use." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="fortnite.jpg" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="fortnite.jpg" />
 </head>
 <body>
-    <div class="container">
-        <h1>I like fortnite!</h1>
-        <h2>I love Fortnite!</h2>
-        <h2>Here is where I upload my Fortnite Highlights</h2>
-        <img src="fortnite.jpg" alt="Fortnite Image" width="500">
-        <a href="about.html">About Me</a>  <!-- Link to About page -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#">Syafiq<span class="accent">G</span></a>
+      <nav class="links">
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#get-started">Get Started</a>
+        <a href="about.html">About</a>
+        <a class="btn" href="https://github.com/Syafiq-Ghazali/SyafiqGhazali" target="_blank" rel="noopener">GitHub</a>
+      </nav>
     </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Amazing Project</h1>
+        <p class="tagline">Fast. Clean. Robust. A project you actually want to use.</p>
+        <div class="cta-row">
+          <a class="btn" href="#get-started">Get Started</a>
+          <a class="btn ghost" href="https://github.com/Syafiq-Ghazali/SyafiqGhazali" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+        <p class="meta">v1.0 · MIT · HTML/CSS</p>
+      </div>
+      <div class="hero-img">
+        <img src="fortnite.jpg" alt="Project preview">
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2>Highlights</h2>
+      <p class="sub">A quick tour of why this project slaps.</p>
+
+      <div class="grid cards">
+        <article class="card">
+          <h3>Blazing Fast</h3>
+          <p>Optimized structure, minimal bloat, and responsive layout.</p>
+        </article>
+        <article class="card">
+          <h3>Easy to Extend</h3>
+          <p>Simple HTML/CSS blocks — add more sections in minutes.</p>
+        </article>
+        <article class="card">
+          <h3>Reliable</h3>
+          <p>Clean markup, accessible colors, and mobile-friendly grids.</p>
+        </article>
+      </div>
+
+      <ul class="chips">
+        <li>HTML</li><li>CSS</li><li>GitHub Pages</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery" class="section alt">
+    <div class="container">
+      <h2>Gallery</h2>
+      <p class="sub">Screenshots, build photos, or UI shots — swap in your own images.</p>
+
+      <div class="grid gallery">
+        <img src="fortnite.jpg" alt="Screenshot 1">
+        <img src="fortnite.jpg" alt="Screenshot 2">
+        <img src="fortnite.jpg" alt="Screenshot 3">
+      </div>
+    </div>
+  </section>
+
+  <section id="get-started" class="section">
+    <div class="container">
+      <h2>Get Started</h2>
+      <p class="sub">Clone, open in your browser, and you’re done.</p>
+
+      <div class="code">
+<pre><code>$ git clone https://github.com/Syafiq-Ghazali/SyafiqGhazali
+$ cd SyafiqGhazali
+$ # open index.html in your browser</code></pre>
+      </div>
+
+      <div class="grid two">
+        <div>
+          <h3>Customize</h3>
+          <ul class="list">
+            <li>Edit <code>index.html</code> headings and text.</li>
+            <li>Replace images in <code>#gallery</code> with your screenshots.</li>
+            <li>Tune colors and spacing in <code>style.css</code> (CSS variables).</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Publish (GitHub Pages)</h3>
+          <ol class="list">
+            <li>Push changes to <code>main</code>.</li>
+            <li>In your repo: Settings → Pages → “Deploy from a branch”.</li>
+            <li>Select branch <code>main</code> and folder <code>/root</code>.</li>
+            <li>Wait a minute — site will be live at the Pages URL.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="y"></span> Syafiq Ghazali · Amazing Project</p>
+      <nav class="links">
+        <a href="about.html">About</a>
+        <a href="https://github.com/Syafiq-Ghazali" target="_blank" rel="noopener">Profile</a>
+        <a href="mailto:mmugha01@student.ubc.ca">Contact</a>
+      </nav>
+    </div>
+    <script>
+      // tiny convenience — no frameworks, no build
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 </body>
 </html>
